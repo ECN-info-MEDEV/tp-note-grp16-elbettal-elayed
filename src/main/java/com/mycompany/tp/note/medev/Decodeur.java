@@ -19,7 +19,7 @@ public class Decodeur extends Joueur {
     public Decodeur() {
         super() ;
     }
-
+ 
     public void choix() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Decodeur : choisit 4 pions: J pour Jaune, R pour Rouge, B pour Bleu, V pour Vert");
