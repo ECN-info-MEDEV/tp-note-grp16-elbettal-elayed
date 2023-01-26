@@ -11,18 +11,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- *
+ * classe ou se deroule le jeu
  * @author samar
  */
 public class PlateauJeuTest {
     
+    /**
+     *
+     */
     public PlateauJeuTest() {
     }
     
+    /**
+     *
+     */
     @BeforeAll
     public static void setUpClass() {
     }
     
+    /**
+     *
+     */
     @AfterAll
     public static void tearDownClass() {
     }

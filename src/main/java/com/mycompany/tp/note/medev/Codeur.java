@@ -9,18 +9,21 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- *
+ * classe de tour de jeu du codeur, generation de la combinaison du codeur
  * @author samar
  */
 public class Codeur extends Joueur {
     
-    private ArrayList<Pion> ListPion = new ArrayList<>();
-
+    /**
+     * constructeur
+     */
     public Codeur() {
         super() ;
     }
      
-    
+    /**
+     * methode de choi des pions du codeur
+     */
     public void choix() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Codeur : choisit 4 pions: J pour Jaune, R pour Rouge, B pour Bleu, V pour Vert");
@@ -29,17 +32,12 @@ public class Codeur extends Joueur {
             String str = sc.nextLine();
 
             Pion P = new Pion(str);
-            ListPion.add(P); 
+            this.getListPion().add(P); 
             
 
         }
 
     }
-
-    public ArrayList<Pion> getListPion() {
-        return ListPion;
-    }
-
 
     
 }

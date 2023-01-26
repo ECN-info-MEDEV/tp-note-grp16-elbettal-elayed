@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Decodeur extends Joueur {
 
-    private ArrayList<Pion> ListPion = new ArrayList<>();
+
 
 
     public Decodeur() {
@@ -27,12 +27,8 @@ public class Decodeur extends Joueur {
             System.out.println(i+1  + " ");
             String str = sc.nextLine();
             Pion P = new Pion(str);
-            ListPion.add(P);
+            this.getListPion().add(P);
         }
-    }
-
-    public ArrayList<Pion> getListPion() {
-        return ListPion;
     }
 
 
