@@ -11,20 +11,20 @@ import java.util.Scanner;
  *
  * @author samar
  */
-public class Decodeur {
+public class Decodeur extends Joueur {
 
     private ArrayList<Pion> ListPion = new ArrayList<>();
 
-    private int score;
 
     public Decodeur() {
-        score = 0;
+        super() ;
     }
 
     public void choix() {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Decodeur : choisit 4 pions: J pour Jaune, R pour Rouge, B pour Bleu, V pour Vert");
         for (int i = 0; i < 4; i++) {
-            System.out.println("choisit 4 pions: J pour Jaune, R pour Rouge, B pour Bleu, V pour Vert");
+            System.out.println(i+1  + " ");
             String str = sc.nextLine();
             Pion P = new Pion(str);
             ListPion.add(P);
@@ -41,13 +41,6 @@ public class Decodeur {
         return ListPion;
     }
 
-    public int getScore() {
-        return score;
-    }
 
-    public void setScore(int score) {
-        this.score = score;
-
-    }
 
 }
