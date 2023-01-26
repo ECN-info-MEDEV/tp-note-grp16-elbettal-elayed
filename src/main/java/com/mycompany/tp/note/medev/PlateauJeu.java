@@ -40,6 +40,7 @@ public class PlateauJeu {
         while (i < 12 && !trouve) {
             decodeur.choix();
             ListPionDecodeur = decodeur.getListPion();
+            AddCombinaison( ListPionDecodeur, i) ;
             if (trouver()) {
                 trouve = true;
                 System.out.println("Vous avez trouvez la combinaison aprés " + i + "tentative(s)");
@@ -47,7 +48,6 @@ public class PlateauJeu {
                 comparaison();
 
             }
-
         }
 
     }
@@ -78,6 +78,12 @@ public class PlateauJeu {
             }
         }
         return k == 4;
+    }
+    
+    public  void AddCombinaison(ArrayList<Pion> listeP, int i){
+        for (int k = 0; k < 4; k++) {
+            plateau[i][k] = listeP.get(k).getColor() ;
+        }
     }
 
 }
