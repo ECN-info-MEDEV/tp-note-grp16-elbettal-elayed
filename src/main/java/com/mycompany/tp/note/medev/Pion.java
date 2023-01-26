@@ -13,7 +13,7 @@ public class Pion {
     private String Color;
     
     public Pion() {
-        
+        this.Color = "N";
     }
     
     public Pion(String couleur){
@@ -23,6 +23,14 @@ public class Pion {
         this.Color=couleur;
     }
         }
+
+    public String getColor() {
+        return Color;
+    }
+
+    public void setColor(String Color) {
+        this.Color = Color;
+    }
         
     
 }
