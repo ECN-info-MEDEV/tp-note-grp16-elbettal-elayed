@@ -12,37 +12,68 @@ import java.util.ArrayList;
  */
 public class PlateauJeu {
 
-    private String[][] plateau ;
+    private String[][] plateau;
     private ArrayList<Pion> ListPionCodeur = new ArrayList<>();
     private ArrayList<Pion> ListPionDecodeur = new ArrayList<>();
-    
-    
+    private ArrayList<Pion> TrousDeMarque = new ArrayList<>();
+
     public PlateauJeu() {
         plateau = new String[12][4];
     }
-    
+
     public void setColor(int row, int col, String couleur) {
-        plateau[row][col] = couleur ;
+        plateau[row][col] = couleur;
     }
 
     public String getColor(int row, int col) {
         return plateau[row][col];
     }
-    
-    
-    public void Manche(){
-         Codeur codeur =new Codeur();
-         Decodeur decodeur=new Decodeur();
-         codeur.choix();
-         decodeur.choix();
-         ListPionCodeur=codeur.getListPion();
-         ListPionDecodeur=decodeur.getListPion();
-     
-    }
-    public void comparaison(){
-        if(ListPionCodeur.get(0)==ListPionDecodeur.get(0)){
+
+    public void Manche() {
+        Codeur codeur = new Codeur();
+        Decodeur decodeur = new Decodeur();
+        codeur.choix();
+        ListPionCodeur = codeur.getListPion();
+        int i = 0;
+        boolean trouve = false;
+        while (i < 12 && !trouve) {
+            decodeur.choix();
+            ListPionDecodeur = decodeur.getListPion();
+            if ( trouver()) {
+                trouve = true ;
+            }
+            else {
+                comparaison() ;
             
+            }
+
+        }
+
+    }
+
+    public void comparaison() {
+        for (int i = 0; i < 4; i++) {
+            if (ListPionCodeur.get(i) == ListPionDecodeur.get(i)) {
+                Pion P1 = new Pion("N");
+                TrousDeMarque.add(P1);
+            }
+            for (int j = 0; j < 4; j++) {
+                if (ListPionCodeur.get(i) == ListPionDecodeur.get(j)) {
+                    Pion P2 = new Pion("Bl");
+                    TrousDeMarque.add(P2);
+                }
+            }
         }
     }
-    
+
+    public boolean trouver() {
+        int k = 0;
+        for (int i = 0; i < 4; i++) {
+            if (ListPionCodeur.get(i) == ListPionDecodeur.get(i)) {
+                k++;
+            }
+        }
+        return k == 4 ;
+    }
+
 }
