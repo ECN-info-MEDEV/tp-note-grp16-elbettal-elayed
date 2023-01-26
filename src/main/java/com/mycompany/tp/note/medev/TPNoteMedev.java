@@ -12,6 +12,8 @@ package com.mycompany.tp.note.medev;
 public class TPNoteMedev {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        PlateauJeu PJ = new PlateauJeu() ;
+        PJ.Manche();
+        
     }
 }

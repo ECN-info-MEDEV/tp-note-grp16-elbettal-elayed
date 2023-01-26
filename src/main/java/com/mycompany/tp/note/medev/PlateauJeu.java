@@ -43,7 +43,7 @@ public class PlateauJeu {
             AddCombinaison( ListPionDecodeur, i) ;
             if (trouver()) {
                 trouve = true;
-                System.out.println("Vous avez trouvez la combinaison aprés " + i + "tentative(s)");
+                System.out.println("Vous avez trouvez la combinaison aprés " + i+1 + "tentative(s)");
             } else {
                 comparaison();
 
@@ -55,25 +55,26 @@ public class PlateauJeu {
     public void comparaison() {
         System.out.println("Trous de Marque :");
         for (int i = 0; i < 4; i++) {
-            if (ListPionCodeur.get(i) == ListPionDecodeur.get(i)) {
+            if (ListPionCodeur.get(i).getColor().equals(ListPionDecodeur.get(i).getColor())) {
                 Pion P1 = new Pion("N");
                 TrousDeMarque.add(P1);
                 System.out.print("  " + P1.getColor());
             }
             for (int j = 0; j < 4; j++) {
-                if (ListPionCodeur.get(i) == ListPionDecodeur.get(j)) {
+                if (ListPionCodeur.get(i).getColor().equals(ListPionDecodeur.get(j).getColor()))  {
                     Pion P2 = new Pion("Bl");
                     TrousDeMarque.add(P2);
                     System.out.print("  " + P2.getColor());
                 }
             }
         }
+        System.out.println("");
     }
 
     public boolean trouver() {
         int k = 0;
         for (int i = 0; i < 4; i++) {
-            if (ListPionCodeur.get(i) == ListPionDecodeur.get(i)) {
+            if (ListPionCodeur.get(i).getColor().equals(ListPionDecodeur.get(i).getColor())) {
                 k++;
             }
         }

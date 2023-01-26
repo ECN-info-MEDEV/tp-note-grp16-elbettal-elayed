@@ -22,7 +22,6 @@ public abstract class Joueur {
     
      
     
-    
     public int getScore() {
         return score;
     }

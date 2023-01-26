@@ -29,12 +29,6 @@ public class Decodeur extends Joueur {
             Pion P = new Pion(str);
             ListPion.add(P);
         }
-        // print le choix du decodeur
-        System.out.println("vous avez choisis :");
-        for (int i = 0; i < 4; i++) {
-            System.out.print("  " + ListPion.get(i).getColor());
-
-        }
     }
 
     public ArrayList<Pion> getListPion() {
