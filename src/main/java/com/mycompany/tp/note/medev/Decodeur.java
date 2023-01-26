@@ -7,12 +7,10 @@ package com.mycompany.tp.note.medev;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * 
- */
 public class Decodeur {
     private ArrayList<Pion> ListPion = new ArrayList<>();
+
+    
     public void choix(){
     Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 4; i++) {
@@ -24,6 +22,8 @@ public class Decodeur {
             
 
         }}
+
+    
     public ArrayList<Pion> getListPion() {
         return ListPion;
     }

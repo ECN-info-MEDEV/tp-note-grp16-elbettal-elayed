@@ -15,6 +15,9 @@ public class Codeur {
 
     private ArrayList<Pion> ListPion = new ArrayList<>();
 
+    /**
+     *
+     */
     public void choix() {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 4; i++) {
@@ -29,6 +32,10 @@ public class Codeur {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<Pion> getListPion() {
         return ListPion;
     }

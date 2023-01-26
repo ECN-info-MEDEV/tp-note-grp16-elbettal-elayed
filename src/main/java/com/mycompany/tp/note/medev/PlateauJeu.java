@@ -17,18 +17,36 @@ public class PlateauJeu {
     private ArrayList<Pion> ListPionDecodeur = new ArrayList<>();
     private ArrayList<Pion> TrousDeMarque = new ArrayList<>();
 
+    /**
+     *
+     */
     public PlateauJeu() {
         plateau = new String[12][4];
     }
 
+    /**
+     *
+     * @param row
+     * @param col
+     * @param couleur
+     */
     public void setColor(int row, int col, String couleur) {
         plateau[row][col] = couleur;
     }
 
+    /**
+     *
+     * @param row
+     * @param col
+     * @return
+     */
     public String getColor(int row, int col) {
         return plateau[row][col];
     }
 
+    /**
+     *
+     */
     public void Manche() {
         Codeur codeur = new Codeur();
         Decodeur decodeur = new Decodeur();
@@ -51,6 +69,9 @@ public class PlateauJeu {
 
     }
 
+    /**
+     *
+     */
     public void comparaison() {
         System.out.print("Trous de Marque :");
         for (int i = 0; i < 4; i++) {
@@ -69,6 +90,10 @@ public class PlateauJeu {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean trouver() {
         int k = 0;
         for (int i = 0; i < 4; i++) {
