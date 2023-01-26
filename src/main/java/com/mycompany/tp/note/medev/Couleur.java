@@ -7,8 +7,8 @@ package com.mycompany.tp.note.medev;
 import java.util.ArrayList;
 
 /**
- *
- * @author samar
+ * définit la liste des couleurs possible des pions
+ * 
  */
 public class Couleur {
     ArrayList <String> ListCouleur=new ArrayList<>();
