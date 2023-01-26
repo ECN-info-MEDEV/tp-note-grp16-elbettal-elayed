@@ -11,8 +11,18 @@ import java.util.ArrayList;
  * @author samar
  */
 public abstract class Joueur {
+    
     private int score;
+    
     private ArrayList<Pion> ListPion = new ArrayList<>();
+
+    public Joueur() {
+        this.score = 0;
+    }
+    
+    
+    
+    
     public int getScore() {
         return score;
     }
