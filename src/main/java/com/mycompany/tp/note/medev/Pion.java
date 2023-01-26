@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author samar
  */
 public class Pion {
-    String Color;
+    private String Color;
     
     public Pion() {
         
