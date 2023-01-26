@@ -7,24 +7,47 @@ package com.mycompany.tp.note.medev;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ *
+ * @author samar
+ */
 public class Decodeur {
+
     private ArrayList<Pion> ListPion = new ArrayList<>();
 
-    
-    public void choix(){
-    Scanner sc = new Scanner(System.in);
+    private int score;
+
+    public Decodeur() {
+        score = 0;
+    }
+
+    public void choix() {
+        Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 4; i++) {
             System.out.println("choisit 4 pions: J pour Jaune, R pour Rouge, B pour Bleu, V pour Vert");
             String str = sc.nextLine();
-
             Pion P = new Pion(str);
-            ListPion.add(P); 
-            
+            ListPion.add(P);
+        }
+        // print le choix du decodeur
+        System.out.println("vous avez choisis :");
+        for (int i = 0; i < 4; i++) {
+            System.out.print("  " + ListPion.get(i).getColor());
 
-        }}
+        }
+    }
 
-    
     public ArrayList<Pion> getListPion() {
         return ListPion;
     }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+
+    }
+
 }
