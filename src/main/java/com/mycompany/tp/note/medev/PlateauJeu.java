@@ -51,7 +51,7 @@ public class PlateauJeu {
         }
 
     }
-
+ 
     public void comparaison() {
         System.out.println("Trous de Marque :");
         for (int i = 0; i < 4; i++) {

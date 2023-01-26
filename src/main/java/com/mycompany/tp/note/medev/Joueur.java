@@ -20,7 +20,7 @@ public abstract class Joueur {
         this.score = 0;
     }
     
-    
+     
     
     
     public int getScore() {

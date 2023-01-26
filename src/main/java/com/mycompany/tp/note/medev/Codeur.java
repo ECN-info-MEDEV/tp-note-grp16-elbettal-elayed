@@ -19,7 +19,7 @@ public class Codeur extends Joueur {
     public Codeur() {
         super() ;
     }
-    
+     
     
     public void choix() {
         Scanner sc = new Scanner(System.in);
